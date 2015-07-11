@@ -14,7 +14,7 @@ class Candidate(models.Model):
 	email = models.CharField(max_length=50, unique=True)
 	password = models.CharField(max_length=50)
 	id = models.CharField(max_length=64, primary_key=True, editable=False)
-	recruiter = models.ForeignKey(Recruiter, default=None)
+	recruiter = models.ForeignKey(Recruiter, blank=True, null=True, on_delete=models.SET_NULL)
 
 	ts_created = models.DateTimeField(auto_now_add=True)
 	ts_updated = models.DateTimeField(auto_now=True)

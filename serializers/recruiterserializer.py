@@ -11,4 +11,5 @@ class RecruiterSerializer(DynamicFieldsModelSerializer):
         fields = (
             'email',
             'name',
+			'id',
         )
